@@ -50,7 +50,7 @@ with col1:
     st.markdown("This app is made using Streamlit.")
 
 with col2:
-    st.image(image="Images\open-ai-seeklogo.com.svg")
+    st.image(image="open-ai-seeklogo.com.svg")
 
 st.markdown("### Enter the e-mail you wish to improve.")
 
