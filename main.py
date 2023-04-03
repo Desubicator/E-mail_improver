@@ -1,6 +1,7 @@
 import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
+import os
 
 template = """
 Below is an e-mail that may be poorly worded.
@@ -30,6 +31,8 @@ prompt = PromptTemplate(
     input_variables={"tone", "dialect", "email"},
     template=template,
 )
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 def load_LLM():
     llm = OpenAI(temperature=.5)
